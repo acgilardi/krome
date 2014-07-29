@@ -1,0 +1,19 @@
+{
+    "plugin_search_path": [
+        "/Users/acgilardi/.nvm/v0.10.28/lib/node_modules/cca/cordova",
+        "/Users/acgilardi/.nvm/v0.10.28/lib/node_modules/cca/cordova/cordova-plugins",
+        "/Users/acgilardi/.nvm/v0.10.28/lib/node_modules/cca/chrome-cordova/plugins"
+    ],
+    "lib": {
+        "android": {
+            "uri": "/Users/acgilardi/.nvm/v0.10.28/lib/node_modules/cca/cordova/cordova-android"
+        },
+        "ios": {
+            "uri": "/Users/acgilardi/.nvm/v0.10.28/lib/node_modules/cca/cordova/cordova-ios"
+        },
+        "www": {
+            "uri": "/Users/acgilardi/.nvm/v0.10.28/lib/node_modules/cca/templates/default-app",
+            "link": false
+        }
+    }
+}
