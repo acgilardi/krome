@@ -1,0 +1,14 @@
+<polymer-element name="appmite-today" attributes="title">
+	<template>
+        <h1>{{title}}</h1>
+        <button on-click="{{doit}}">hello</button>
+	</template>
+    <script>
+        Polymer({
+            title: 'default',
+            doit: function() {
+                alert('DONE');
+            }
+        })
+    </script>
+</polymer-element>
