@@ -1,0 +1,32 @@
+<link rel="import" href="../core-toolbar/core-toolbar.html"/>
+<link rel="import" href="../core-icon-button/core-icon-button.html"/>
+
+<polymer-element name="appmite-toolbar" attributes="caption, icons">
+    <template>
+        <style>
+            html,body {
+                height: 100%;
+                margin: 0;
+                background-color: #E5E5E5;
+                font-family: 'RobotoDraft', sans-serif;
+            }
+            core-toolbar {
+                background: #03a9f4;
+                color: white;
+            }
+        </style>
+        <core-toolbar>
+            <core-icon-button icon="menu"></core-icon-button>
+            <span flex>{{caption}}</span>
+            <template repeat="{{icon in icons}}">
+                <core-icon-button icon="{{icon}}"></core-icon-button>
+            </template>
+        </core-toolbar>
+    </template>
+    <script>
+        Polymer('appmite-toolbar',{
+            caption: 'default',
+            icons: ['menu','add','polymer','android']
+        })
+    </script>
+</polymer-element>
