@@ -1,0 +1,36 @@
+<link rel="import" href="../core-header-panel/core-header-panel.html"/>
+<link rel="import" href="../core-toolbar/core-toolbar.html"/>
+
+
+
+<polymer-element name="appmite-page" attributes="caption">
+    <template>
+        <style>
+            html,body {
+                height: 100%;
+                margin: 0;
+                background-color: #E5E5E5;
+                font-family: 'RobotoDraft', sans-serif;
+            }
+            core-header-panel {
+                height: 100%;
+                overflow: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+        </style>
+        <core-header-panel>
+            <core-toolbar>
+                <core-icon-button icon="menu"></core-icon-button>
+                <span flex>{{caption}}</span>
+                <template repeat="{{icon in icons}}">
+                    <core-icon-button icon="{{icon}}"></core-icon-button>
+                </template>
+            </core-toolbar>
+        </core-header-panel>
+    </template>
+    <script>
+        Polymer('appmite-page',{
+            caption: 'What the'
+        })
+    </script>
+</polymer-element>

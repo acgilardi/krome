@@ -1,9 +1,9 @@
 <link rel="import" href="../core-header-panel/core-header-panel.html"/>
-<link rel="import" href="../appmite-toolbar/appmite-toolbar.html"/>
+<link rel="import" href="../core-toolbar/core-toolbar.html"/>
 
 
 
-<polymer-element name="appmite-page" attributes="caption">
+<polymer-element name="appmite-app" attributes="caption">
     <template>
         <style>
             html,body {
@@ -19,7 +19,13 @@
             }
         </style>
         <core-header-panel>
-            <appmite-toolbar caption="{{caption}}"></appmite-toolbar>
+            <core-toolbar>
+                <core-icon-button icon="menu"></core-icon-button>
+                <span flex>{{caption}}</span>
+                <template repeat="{{icon in icons}}">
+                    <core-icon-button icon="{{icon}}"></core-icon-button>
+                </template>
+            </core-toolbar>
         </core-header-panel>
     </template>
     <script>
